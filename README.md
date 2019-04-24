@@ -1,5 +1,5 @@
 <h1 align="center">Markdown Master</h1><h4 align="center">
-<h4 align="center">The best Markdown tools to make your README.md</h4>
+<h4 align="center">The best tools to make your README.md</h4>
   
 <p align="center">
 <a href="https://github.com/TheTeamByte/Markdown-Master
