@@ -5,11 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.4/css/uikit.min.css" />
     <title>Markdown Master</title>
 </head>
 
 <body>
+    <div id="controls">
+        <h2>General</h2>
+        <input id="username" class="uk-input uk-form-width-medium place" type="text" placeholder="Github Username">
+        <input id="reponame" class="uk-input uk-form-width-medium place" type="text" placeholder="Repository Name">
+        <input id="title" class="uk-input uk-form-width-medium place" type="text" placeholder="Project Title"
+            uk-tooltip="if you want to have another title">
+        <select class="uk-select uk-form-width-medium place" uk-tooltip="ready maked markdown files that you can use">
+            <option value="" disabled selected>Select Theme</option>
+        </select>
+        <button class="uk-button uk-button-primary place" uk-toggle="target: #modal-preview"
+            uk-tooltip="preview the current theme"><span uk-icon="icon: desktop"></span> View Theme</button>
 
+        <div id="modal-preview" class="uk-modal-full" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+                <h2 class="uk-modal-title">View Theme</h2>
+                <iframe src="https://github.com/TheTeamByte/Markdown-Master/tree/master/themes" frameborder="0"
+                    width="100%" height="100%"></iframe>
+            </div>
+        </div>
+        <h2>Badges</h2>
+        <select class="uk-select uk-form-width-medium place" style="margin-bottom: 10px"
+            uk-tooltip="the themes from shields.io">
+            <option value="" disabled selected>Select Theme</option>
+            <option value="plastic">Plastic</option>
+            <option value="flat">Flat</option>
+            <option value="flat-square">Flat Square</option>
+            <option value="for-the-badge">For The Badge</option>
+            <option value="popout">Popout</option>
+            <option value="popout-square">Popout Square</option>
+            <option value="social">Social</option>
+        </select><br>
+        <label><input class="uk-checkbox place" type="checkbox"> Release</label>
+        <label><input class="uk-checkbox place" type="checkbox"> Last Commit</label>
+        <label><input class="uk-checkbox place" type="checkbox"> Discord</label>
+        <label><input class="uk-checkbox place" type="checkbox"> License</label><br>
+        <h2>Extra Values</h2>
+        <input id="discordserverid" class="uk-input uk-form-width-medium place" type="text"
+            placeholder="Discord Server ID" uk-tooltip="if you use the Discord Badge">
+        <input id="codacyprojectid" class="uk-input uk-form-width-medium place" type="text"
+            placeholder="Codacy Project ID" uk-tooltip="if you use the Codacy Badge">
+        <h2>Export</h2>
+        <button class="uk-button uk-button-primary place" onclick="download()"
+            uk-tooltip="Downloads the Markdown file"><span uk-icon="icon: download"></span>
+            Download</button>
+        <button class="uk-button uk-button-primary place" onclick="editOnGithub()"
+            uk-tooltip="opens a new tab with your readme.md so you can paste the new markdown"><span
+                uk-icon="icon:  file-edit"></span> Edit on Github</button>
+    </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.4/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.4/js/uikit-icons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+<script src="main.js"></script>
 
 </html>
