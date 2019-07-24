@@ -12,4 +12,3 @@
 |:-----------------:|:------:|
 | Shields.io Badges |  TODO  |
 |     Templates     |  TODO  |
-|  Table Generator  |  TODO  |
